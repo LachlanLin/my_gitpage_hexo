@@ -68,6 +68,22 @@ ImportError: dynamic module does not define module export function (PyInit_cv_br
 产生该报错的原因是因为ROS自己编译的cv_bridge是python2版本, 我是使用python3, 版本不兼容, 所以报错.
 [解决方法](https://medium.com/@beta_b0t/how-to-setup-ros-with-python-3-44a69ca36674)是下载cv_bridage的c++源码, 自己编译并覆盖原本的cv_bridge, 一个细节是, 如果是使用Anaconda, 那么要先将环境deactivate, 另一个细节是在source install/setup.bash时要加参数--extend, 不然这次的setup.bash 会覆盖上一次
 
+```shell
+sudo apt-get install python-catkin-tools python3-dev python3-numpy
+
+mkdir ~/catkin_build_ws && cd ~/catkin_build_ws
+catkin config -DPYTHON_EXECUTABLE=/usr/bin/python3 -DPYTHON_INCLUDE_DIR=/usr/include/python3.6m -DPYTHON_LIBRARY=/usr/lib/x86_64-linux-gnu/libpython3.6m.so
+catkin config --install
+
+mkdir src
+cd src
+git clone -b melodic git@github.com:ros-perception/vision_opencv.git
+
+cd ~/catkin_build_ws
+catkin build cv_bridge
+source install/setup.bash --extend
+```
+
 ### 自定义.msg文件
 
 ROS支持自定义消息的数据格式, 所以我自己也定义了一个mrcnn_result数据格式, , 具体步骤可以看{% post_link learn-slam '另一篇博客'%}但是, 如果自定义数据格式里包含其他的数据结构, 比如我自定义的这个mrcnn_result, ROS就会报错

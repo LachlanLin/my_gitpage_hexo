@@ -1,5 +1,5 @@
 ---
-title: learn-slam
+title: ROS入门
 date: 2020-04-02 20:18:33
 tags:
 - SLAM
@@ -14,15 +14,64 @@ tags:
 
 Ubuntu系统下常用
 
-- cd
-- pwd
-- mkdir
-- ls
-- touch
-- mv
-- cp
-- rm
-- sudo
+<table>
+    <tr>
+        <td>shutdown</td>
+        <td>useadd</td>
+        <td>passwd</td>
+        <td>usedel</td>
+        <td>id</td>
+        <td>su</td>
+    </tr>
+    <tr>
+        <td>groupadd</td>
+        <td>groupdel</td>
+        <td>usemod</td>
+        <td>man</td>
+        <td>help</td>
+        <td>pwd</td>
+    </tr>
+    <tr>
+        <td>ls</td>
+        <td>cd</td>
+        <td>mkdir</td>
+        <td>rmdir</td>
+        <td>touch</td>
+        <td>cp</td>
+    </tr>
+    <tr>
+        <td>rm</td>
+        <td>mv</td>
+        <td>cat</td>
+        <td>more</td>
+        <td>less</td>
+        <td>>和>></td>
+    </tr>
+    <tr>
+        <td>echo</td>
+        <td>head</td>
+        <td>tail</td>
+        <td>ln</td>
+        <td>history</td>
+        <td>date</td>
+    </tr>
+    <tr>
+        <td>cal</td>
+        <td>find</td>
+        <td>locate</td>
+        <td>grep</td>
+        <td>zip/unzip</td>
+        <td>tar</td>
+    </tr>
+    <tr>
+        <td>chown</td>
+        <td>chmod</td>
+        <td>ps</td>
+        <td>kill</td>
+        <td>top</td>
+        <td>apt</td>
+    </tr>
+</table>
 
 ### 常用cmake指令
 
